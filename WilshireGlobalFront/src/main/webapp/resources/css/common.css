@@ -1,0 +1,32 @@
+*{margin:0; padding:0; font-size: 12px;}
+ul,li{list-style: none;}
+/*a,a:active, a:hover, a:link{display: block; width: 100%; height: 100%}*/
+body{ font-family:"굴림", "굴림체"; font-size:16px; text-align:center; color:#333; font-weight:bold; }
+#wrap{position: relative; width:1000px; margin:0 auto; text-align:left; }
+.fix_cont{position: fixed; top: 0; z-index: 20; }
+header{width:1000px; height:150px; background-color: #fff; overflow:hidden; z-index: 20}
+.logo{width:600px; height:150px; margin:0 auto; background: url(../images/logo.jpg)no-repeat center; background-size: contain }
+nav{width:100%;  background:#000; overflow: hidden; z-index: 20}
+nav li{float: left; width: 25%; text-align: center; line-height: 3.5em} 
+nav li h3{color: #fff; cursor: pointer; font-size: 1.15em}
+.menu_box{ width: 1000px; height: auto; position: absolute; overflow: hidden; z-index: -10; background: #fff; border-bottom: 1px solid #333}
+.menu_box .menu{float: left; width: 25%; margin:18px 0; }
+.menu_box .menu li{width: 100%; text-align: center; line-height: 2em; color: #333}
+.menu_box .menu li a{color: #333; text-decoration: none; font-size: 1.1em}
+.menu_box .menu li a:visited{color: #333; text-decoration: none}
+.menu_box .menu li a:hover{color: #333; text-decoration: underline}
+aside{position: relative; left: 0; width: 189px; height:auto; background: #fff; z-index: -11}
+.aside{position: fixed;position: fixed;  top: 192px; width: 189px; height: 200px}
+article{width:800px; min-height: 700px; margin-top: 190px;  margin-left: 200px; position: relative;  overflow: hidden; background: #fff}
+.content{width: 95%; overflow: hidden; margin:32px 5% 128px 5% }
+.content img{width: 100%;}
+/*article_이미지리스트*/
+article .img_list{width: 100%; overflow: hidden; padding: 32px 0 128px 46px}
+article .img_list li{position: relative; float: left; width: 30%; margin-right: 2%; margin-bottom: 2%; height: 160px; overflow: hidden}
+article .img_list li:nth-child(3n){margin-right: 0}
+article .img_list li a{ width: 100%; display: block; overflow: hidden}
+article .img_list li a img{width: 110%; overflow: hidden}
+article .img_list li a .tit_box{position: absolute; bottom: 0px; width: 100%; height: 32px; background: #000; color: #fff; text-align: center; margin: auto 0;}
+article .img_list li a .tit_box p {line-height: 3em; font-weight: lighter; }
+.footer{position: relative; bottom: 0;  width: 100%; height: 188px; background: #000}
+footer{margin-top: 32px; width: 100%; clear:both; height:188px; background:url(../images/footer.png)no-repeat center;  }

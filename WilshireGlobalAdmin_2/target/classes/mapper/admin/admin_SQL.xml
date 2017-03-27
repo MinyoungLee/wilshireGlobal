@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="admin">
+	<select id="selectAdminList" resultType="com.wilshire.admin.vo.PortfolioVO" >
+		SELECT *
+		FROM portfolio
+	</select>
+	
+	<insert id="insertData" parameterType="com.wilshire.admin.vo.PortfolioVO">
+		INSERT INTO portfolio
+			(
+				name,
+				caption,
+				location,
+				client,
+				scale,
+				formation,
+				start_dt,
+				end_dt,
+				imgName,
+				imgOriginalName,
+				imgSize,
+				imgPath,
+				created_datetime,
+				updated_datetime,
+				imgType,
+				imgDate,
+				workType
+			)
+		VALUES
+			(
+				#{name},
+				#{caption},
+				#{location},
+				#{client},
+				#{scale},
+				#{formation},
+				#{start_dt},
+				#{end_dt},
+				#{imgName},
+				#{imgOriginalName},
+				#{imgSize},
+				#{imgPath},
+				curdate(),
+				curdate(),
+				#{imgType},
+				#{imgDate},
+				#{workType}
+			)
+	</insert>
+
+	<select id="detailDataList" resultType="com.wilshire.admin.vo.PortfolioVO" parameterType="String">
+		SELECT *
+		FROM portfolio
+		WHERE boardNo = #{boarNo}
+	</select>
+	
+	<delete id="adminDelete" parameterType="String">
+		DELETE FROM portfolio
+		WHERE boardNo = #{boardNo}
+	</delete>
+	
+</mapper>
